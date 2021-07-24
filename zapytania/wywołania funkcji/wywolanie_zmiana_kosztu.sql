@@ -1,0 +1,1 @@
+exec ZMIANA_KOSZTU_TEMATU @id_tematu = 13, @nowy_koszt = 700;

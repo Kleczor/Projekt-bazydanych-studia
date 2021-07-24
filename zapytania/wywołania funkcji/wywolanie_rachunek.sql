@@ -1,0 +1,1 @@
+SELECT dbo.RACHUNEK_DO_ZAPLATY(1,1) AS Rachunek

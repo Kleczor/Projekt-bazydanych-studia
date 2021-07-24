@@ -1,0 +1,3 @@
+SELECT dbo.RACHUNEK_DO_ZAPLATY(1,1) AS Rachunek
+exec ZMIANA_KOSZTU_TEMATU @id_tematu = 13, @nowy_koszt = 650;
+SELECT dbo.RACHUNEK_DO_ZAPLATY(1,1) AS Rachunek2

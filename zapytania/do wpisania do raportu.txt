@@ -1,0 +1,60 @@
+do rozdziału o tworzeniu bazy dopisać:
+
+Bazę danych wygenerowano z tabel utworzonych w programie libreoffice calc. Następnie nadano klucze za pomocą zapytań:
+
+ALTER TABLE [nazwa tabeli]
+ALTER COLUMN [nazwa kolumny] int NOT NULL;
+ALTER TABLE [nazwa tabeli]
+ADD PRIMARY KEY ([nazwa kolumny]);
+
+3.1. Widoki
+
+a) Kursant_Klient
+Widok która zestawia listę kursantów z klientem (firmą) opłacającą kursy. W przypadku klientów indywidualnych wartość nip wynosi null, natomiast nazwę firmy (również wartość null) zastąpiono komunikatem "klient indywidualny".
+[kod]
+[screen]
+
+b) Popularnosc_kursow
+Widok wyświetlający ile uczestników miał dany temat kursów.
+[kod]
+[screen]
+
+
+c) Ile_kursantow_na_trybie
+Wyświetla widok który podsumowuje ile kursantów brało udział w jakim trybie kursów.
+[kod]
+[screen]
+
+d) Popularnosc_trybu
+Wyswietla ile kursów odbyło się w danym trybie
+[kod]
+[screen]
+
+3.2. Procedury składowe
+a) Zmiana_klienta_dla_kursanta
+Zmienia id klienta w rekordzie kursanta. Wprowadza się id kursanta którego chcemy edytować, oraz id klienta na jakie chcemy ustawić wartość
+[kod]
+
+b) Zmiana_kosztu_tematu
+Zmienia wartość kwoty netto za dany temat kursu. Wprowadza się 
+[kod]
+
+3.3 Funkcje
+
+a) Rachunek_do_zaplaty
+Podlicza ile osób od danego klienta było na danym kursie, a następnie przemnaża prez cenę kursu netto. Wprowadza się wartości: id klienta oraz id kursu. Uwaga: klient o id 1 to kategoria klient indywidualny, w związku z czym podliczy razem wszystkich klientów indywidualnych.
+[kod]
+[screen]
+
+b) Liczba_klientow_indywidualnych
+podlicza ilu z kursantów jest klientami indywidualnymi
+[kod]
+[screen]
+
+
+3.4 Triggery
+a) Def_klient2
+W przypadku nie podania wartości id_klienta przy dodawaniu nowego rekordu automatycznie przypisuje mu wartość 1, odpowiadającą klientowi indywidualnemu.
+[kod]
+[screen]
+

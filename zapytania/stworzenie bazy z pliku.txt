@@ -1,0 +1,6 @@
+Bazę danych wygenerowano z tabel utworzonych w programie libreoffice calc. Następnie nadano klucze za pomocą zapytań:
+
+ALTER TABLE [nazwa tabeli]
+ALTER COLUMN [nazwa kolumny] int NOT NULL;
+ALTER TABLE [nazwa tabeli]
+ADD PRIMARY KEY ([nazwa kolumny]);
